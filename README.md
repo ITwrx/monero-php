@@ -1,10 +1,12 @@
 # Monero-PHP
 
-A PHP library for communicating with monero-wallet-rpc. This fork is being used with Laravel and is sublicensed under the AGPLv3.
+A PHP library for communicating with monero-wallet-rpc. For more information about Monero, please visit https://getmonero.org/home.
 
-For more information about Monero, please visit https://getmonero.org/home.
 
-To donate to the original author of this package or for the original (MIT licensed) package see: https://github.com/PsychicCat/monero-php
+This fork is being used with Laravel and any of it's code is licensed under the AGPLv3. 
+
+
+To donate to the original author of this package, or for the original (MIT licensed) package see: https://github.com/PsychicCat/monero-php
 
 
 
