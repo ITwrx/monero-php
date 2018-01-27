@@ -3,7 +3,7 @@
 A PHP library for communicating with monero-wallet-rpc. For more information about Monero, please visit https://getmonero.org/home.
 
 
-This fork's modifications are licensed under the AGPLv3 and are being used with Laravel (starting with 5.5). 
+This fork's modifications are licensed under the AGPLv3 and are being tested for use with Laravel (starting with 5.5). 
 
 
 To donate to the original author of this package, or for the original (MIT licensed) package see: https://github.com/PsychicCat/monero-php
