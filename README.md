@@ -1,12 +1,12 @@
 # Monero-PHP
 
-A PHP library for the Monero `simplewallet` JSON-RPC interface. 
+A PHP library for communicating with monero-wallet-rpc. This repo is currently being used with Laravel.
 
 For more information about Monero, please visit https://getmonero.org/home.
 
-If you found this useful, feel free to donate!
+To donate to the original author of this package see: https://github.com/PsychicCat/monero-php
 
-XMR: `47Vmj6BXSRPax69cVdqVP5APVLkcxxjjXdcP9fJWZdNc5mEpn3fXQY1CFmJDvyUXzj2Fy9XafvUgMbW91ZoqwqmQ6RjbVtp`
+
 
 ## Installation
 
@@ -17,20 +17,19 @@ Install the library using Composer.
 ## Create an Instance of the Wallet
 
 ```php
-require 'vendor/autoload.php';
+//not needed for laravel
+//require 'vendor/autoload.php';
 use Monero\Wallet;
 
-$wallet = new Monero\Wallet();
-```
+$hostname = 'http://127.0.0.1';
 
-Default hostname and port connects to http://127.0.0.1:18082.
+$port = '18082';
 
-To connect to an external IP or different port:
+$rpc_user = 'monero-wallet-rpc-username';
 
-```php
-$hostname = YOUR_WALLET_IP;
-$port = YOUR_WALLET_PORT;
-$wallet = new Monero\Wallet($hostname, $port);
+$rpc_pass = 'monero-wallet-rpc-pass';
+        
+$wallet = new Monero\Wallet($hostname, $port, $rpc_user, $rpc_pass);
 ```
 
 ## Wallet Methods
