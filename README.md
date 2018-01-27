@@ -14,7 +14,7 @@ Install the library using Composer.
     
     composer require psychiccat/monero-php
 
-## Create an Instance of the Wallet
+## Create an instance of the wallet in your controller
 
 ```php
 //not needed for laravel
@@ -30,7 +30,16 @@ $rpc_user = 'monero-wallet-rpc-username';
 $rpc_pass = 'monero-wallet-rpc-pass';
         
 $wallet = new Monero\Wallet($hostname, $port, $rpc_user, $rpc_pass);
+
+$address = json_decode($wallet->getAddress());
+
+//pass $wallet and $address to your view.
 ```
+## In your view
+```php
+address: {{ $address->address }}
+```
+
 
 ## Wallet Methods
 
