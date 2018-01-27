@@ -10,11 +10,18 @@ class Wallet
      * Wallet constructor.
      * @param string $hostname
      * @param int $port
+     * @param int $rpc_user
+     * @param int $rpc_pass
      */
-    function __construct($hostname = 'http://127.0.0.1', $port = 18082)
+    function __construct($hostname, $port, $rpc_user, $rpc_pass)
     {
         $url = $hostname.':'.$port .'/json_rpc';
-        $this->client = Client::factory($url);
+        $this->client = Client::factory(            
+            $url,
+            [            
+            'auth' => [$rpc_user, $rpc_pass, 'digest']
+            ]
+        );
     }
 
     /**
