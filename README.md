@@ -3,18 +3,31 @@
 A PHP library for communicating with monero-wallet-rpc. For more information about Monero, please visit https://getmonero.org/home.
 
 
-This fork is being used with Laravel and any of it's code is licensed under the AGPLv3. 
+This fork's modifications are licensed under the AGPLv3 and are being used with Laravel (starting with 5.5). 
 
 
 To donate to the original author of this package, or for the original (MIT licensed) package see: https://github.com/PsychicCat/monero-php
 
+## Prior to using this package
+
+start the monero daemon.
+
+```php
+./monerod
+```
+    
+start the monero-wallet-rpc interface.
+
+```php
+./monero-wallet-rpc --rpc-bind-port 18082 --wallet-file ~/Monero/wallets/wallet_name/wallet_key_file_name --rpc-login rpc_user:rpc_pass
+```
 
 
 ## Installation
 
-Install the library using Composer.
+Install the library using Composer, from your project's root directory.
     
-    composer require psychiccat/monero-php
+    composer require ITwrx/monero-php
 
 ## Create an instance of the wallet in your controller
 
@@ -43,7 +56,8 @@ address: {{ $address->address }}
 ```
 
 
-## Wallet Methods
+
+## Available Wallet Methods
 
 ### getBalance
 
