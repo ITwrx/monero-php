@@ -15,6 +15,6 @@
         "graze/guzzle-jsonrpc": "^3.2"
     },
     "autoload": {
-        "psr-4": {"Monero\\":"src/"}
+        "psr-0": {"Monero\\":"src/"}
     }
 }
